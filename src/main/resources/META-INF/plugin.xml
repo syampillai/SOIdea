@@ -1,18 +1,26 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
+
     <id>com.storedobject.idea</id>
-    <name>SOIdea</name>
-    <vendor>Syam Pillai</vendor>
+    <name>SO Development</name>
+    <vendor email="syam.s.pillai@gmail.com" url="http://www.engravgroup.com">storedobject.com</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.storedobject.idea.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <notificationGroup id="SO" displayType="BALLOON"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.storedobject.idea.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <actions>
+        <group id="SOIdea.Menu" text="SO Files" description="SO development">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="SOIdea.LoadFile" class="com.storedobject.idea.LoadJavaFile" text="Load Java File" description="Load java file"/>
+            <action id="SOIdea.SaveFile" class="com.storedobject.idea.SaveJavaFile" text="Save Java File" description="Save java file"/>
+            <action id="SOIdea.LoadAllFiles" class="com.storedobject.idea.LoadAllJavaFiles" text="Load All Java Files" description="Load all java files"/>
+            <action id="SOIdea.ShowSever" class="com.storedobject.idea.ShowServerInfo" text="Server Information" description="Show server information"/>
+            <action id="SOIdea.DisconnectServer" class="com.storedobject.idea.DisconnectServer" text="Disconnect Server" description="Disconnect from server"/>
+            <action id="SOIdea.SwitchServer" class="com.storedobject.idea.SwitchServer" text="Switch Server" description="Switch server to another"/>
+        </group>
+    </actions>
+
 </idea-plugin>
