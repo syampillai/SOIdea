@@ -1,4 +1,4 @@
-package com.github.syampillai.soidea
+package com.storedobject.idea
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

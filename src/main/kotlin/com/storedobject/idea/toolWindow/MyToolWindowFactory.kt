@@ -1,4 +1,4 @@
-package com.github.syampillai.soidea.toolWindow
+package com.storedobject.idea.toolWindow
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -8,8 +8,8 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.syampillai.soidea.MyBundle
-import com.github.syampillai.soidea.services.MyProjectService
+import com.storedobject.idea.MyBundle
+import com.storedobject.idea.services.MyProjectService
 import javax.swing.JButton
 
 
