@@ -1,9 +1,9 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
 
-    <id>com.storedobject.idea</id>
+    <id>com.storedobject.idea.SOIdea</id>
     <name>SO Development</name>
-    <vendor email="syam.s.pillai@gmail.com" url="http://www.engravgroup.com">storedobject.com</vendor>
+    <vendor email="syam.s.pillai@gmail.com" url="http://www.engravgroup.com">Syam Pillai</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
