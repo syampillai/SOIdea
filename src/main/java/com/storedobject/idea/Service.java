@@ -3,9 +3,7 @@ package com.storedobject.idea;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.project.Project;
 import java.io.*;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
+import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -128,7 +126,12 @@ final class Service {
         while (!host.isEmpty() && host.endsWith("/")) {
             host = host.substring(0, host.length() - 1);
         }
-        URL u = new URL(host + "/DEVELOPER");
+        URL u;
+        try {
+            u = new URI(host + "DEVELOPER").toURL();
+        } catch (URISyntaxException e) {
+            throw new IOException(e);
+        }
         url = u.openConnection();
         if(session != null) {
             url.setRequestProperty("Cookie","JSESSIONID=" + session);
