@@ -128,7 +128,7 @@ final class Service {
         }
         URL u;
         try {
-            u = new URI(host + "DEVELOPER").toURL();
+            u = new URI(host + "/DEVELOPER").toURL();
         } catch (URISyntaxException e) {
             throw new IOException(e);
         }
