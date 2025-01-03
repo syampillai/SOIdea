@@ -2,6 +2,10 @@
 
 # SOIdea Changelog
 
+## [2.0.3] - 2025-01-04
+
+- Compatible with 2024.3.* releases.
+
 ## [Unreleased]
 
 ## [2.0.2] - 2024-08-16
